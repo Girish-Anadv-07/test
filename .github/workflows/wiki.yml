@@ -1,0 +1,28 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+permissions:
+  contents: write
+  id-token: write
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Wiki
+        run: |
+          git clone https://github.com/Girish-Anadv-07/test.wiki.git
+          cd test.wiki 
+          rm -rf *
+          cd ..
+          mv ./*.md ./test.wiki/
+          cd test.wiki
+          git add .
+          git commit -m "update"
+          git push
+          
+          
