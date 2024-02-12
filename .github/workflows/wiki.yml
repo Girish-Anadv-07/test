@@ -19,6 +19,7 @@ jobs:
           git config --local user.name "${{secrets.GIT_USER}}"
           git config --local user.email "${{secrets.GIT_GMAIL}}"
           cd ..
+          ls
           mv ./*.md ./test.wiki/
           cd test.wiki
           git add .
