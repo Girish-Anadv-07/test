@@ -13,6 +13,8 @@ jobs:
       - uses: actions/checkout@v3
       - run: |
           cd ..
+          git config --global user.name "${{secrets.GIT_USER}}"
+          git config --global user.email "${{secrets.GIT_GMAIL}}"
           git clone https://github.com/Girish-Anadv-07/test.wiki.git
           cd test.wiki 
           rm -rf *
