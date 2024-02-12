@@ -21,7 +21,7 @@ jobs:
           rm -rf *
           cd ../test
           mv ./*.md ../test.wiki/
-          cd test.wiki
+          cd ../test.wiki
           git add .
           git commit -m "update"
           git push
