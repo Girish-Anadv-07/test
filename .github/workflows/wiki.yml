@@ -16,6 +16,7 @@ jobs:
       - name: Wiki
         run: |
           cd ..
+          ls
           git clone https://github.com/Girish-Anadv-07/test.wiki.git
           cd test.wiki 
           rm -rf *
