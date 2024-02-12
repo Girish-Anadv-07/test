@@ -18,7 +18,7 @@ jobs:
         run: |
           git config --global user.name "${{secrets.GIT_USER}}"
           git config --global user.email "${{secrets.GIT_GMAIL}}"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git remote -v
           git clone https://github.com/Girish-Anadv-07/test.wiki.git
           cd test.wiki 
           cd ..
