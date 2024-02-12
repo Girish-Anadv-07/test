@@ -15,12 +15,12 @@ jobs:
         
       - name: Wiki
         run: |
-          git clone https://github.com/Girish-Anadv-07/test.wiki.git
-          cd test.wiki 
+          git clone https://github.com/Girish-Anadv-07/test.git
+          cd test 
           rm -rf *.md
           cd ..
-          mv ./*.md ./test.wiki/
-          cd test.wiki
+          mv ./*.md ./test/
+          cd test
           git add .
           git commit -m "update"
           git push
