@@ -23,7 +23,7 @@ jobs:
       run: |
           cd test.wiki 
           rm -rf *
-          mv ../*.md ./test.wiki/
+          mv ../*.md .
           git add .
           git commit -m "update"
           git push
