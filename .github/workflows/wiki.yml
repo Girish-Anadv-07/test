@@ -21,5 +21,10 @@ jobs:
 
     - name: Wiki
       run: |
-          ls
+          cd test.wiki 
+          rm -rf *
+          mv ../*.md ./test.wiki/
+          git add .
+          git commit -m "update"
+          git push
           
