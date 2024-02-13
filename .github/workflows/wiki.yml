@@ -10,7 +10,17 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: |
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        repository: test.wiki
+
+    - name: Wiki
+      run: |
+          ls
           git config --global user.name "${{secrets.GIT_USER}}"
           git config --global user.email "${{secrets.GIT_GMAIL}}"
           git clone git@github.com:Girish-Anadv-07/test.git
