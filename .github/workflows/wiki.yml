@@ -17,18 +17,9 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: Girish-Anadv-07/test.wiki
+        path: test.wiki
 
     - name: Wiki
       run: |
           ls
-          git config --global user.name "${{secrets.GIT_USER}}"
-          git config --global user.email "${{secrets.GIT_GMAIL}}"
-          git clone git@github.com:Girish-Anadv-07/test.git
-          git clone https://github.com/Girish-Anadv-07/test.wiki.git
-          cd test.wiki 
-          cd ../test
-          mv ./*.md ../test.wiki/
-          cd ../test.wiki
-          git add .
-          git commit -m "update"
-          git push
+          
